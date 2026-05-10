@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Catering Marketplace (CAT)
 
 Modern web platform to discover, compare, chat with, and book catering vendors for events.
@@ -47,3 +48,7 @@ Each app has its own env file:
 - `apps/web/.env.local`
 - `apps/api/.env`
 
+=======
+# CAT
+A app or web
+>>>>>>> 2fd3b4d9bd25fc76edb015048bf341fbc2fa2469
