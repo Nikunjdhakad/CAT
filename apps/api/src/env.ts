@@ -9,7 +9,11 @@ const EnvSchema = z
     JWT_SECRET: z.string().default("local-dev-only-change-me-min-32-chars"),
     JWT_EXPIRES_IN: z.string().default("7d"),
     /** Set to "true" to allow POST /auth/register with role=admin (bootstrap only). */
-    ALLOW_ADMIN_REGISTER: z.enum(["true", "false"]).default("false")
+    ALLOW_ADMIN_REGISTER: z.enum(["true", "false"]).default("false"),
+    /** Cloudinary configuration for image uploads */
+    CLOUDINARY_CLOUD_NAME: z.string().optional(),
+    CLOUDINARY_API_KEY: z.string().optional(),
+    CLOUDINARY_API_SECRET: z.string().optional()
   })
   .superRefine((data, ctx) => {
     if (data.NODE_ENV === "production" && data.JWT_SECRET.length < 32) {
